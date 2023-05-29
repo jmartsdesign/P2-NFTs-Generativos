@@ -1,4 +1,4 @@
-// Programa generativo de NFTs
+// Programa generativo de NFTs - 05/2023
 // Böhm in Space Pilgrimage - Böhm em Peregrinação do Espaço
 // 2023136 Jorge Antunes
 
@@ -11,7 +11,9 @@ import ddf.minim.ugens.*;
 String EscolheVideo = "NFTs-v2.mp4";
 String EscolherImagem = "NFTs-v3.jpg";
 String EscolherGravaSom = "NFTs-v3.wav";
-
+boolean ambiente = false; // cria variável ligar e desligar cor ambiente
+boolean maskara = false; // cria variável ligar e desligar máscara
+// --------------------------------------------------------------------------------
 PImage imgOne;
 PImage imgMask;
 Movie video; // Cria uma variável para armazenar o vídeo de fundo
@@ -32,8 +34,6 @@ AudioRecorder recorder;
 boolean recording = false;
 float[] waveform = new float[200]; // Array to store the waveform
 float angle = 0; // Angle for generating the waveform
-boolean ambiente = false; // cria variável ligar e desligar cor ambiente
-boolean maskara = false; // cria variável ligar e desligar máscara
 
 void setup() {
   // randomSeed(millis());
